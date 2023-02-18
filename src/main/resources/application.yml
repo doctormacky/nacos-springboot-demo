@@ -1,5 +1,9 @@
 nacos:
   config:
-    server-addr: xxx.xx.x.xxx:8848
+    server-addr: xxx.x.xx.xxx:8848
+    data-id: db.properties
+    auto-refresh: true
+    bootstrap:
+      enable: true
 server:
   port: 8080
