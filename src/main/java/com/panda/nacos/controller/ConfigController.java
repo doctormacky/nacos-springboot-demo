@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("config")
 public class ConfigController {
-    @NacosValue(value = "${username}", autoRefreshed = true)
+    @NacosValue(value = "${db.username}", autoRefreshed = true)
     private String username;
 
-    @NacosValue(value = "${password}", autoRefreshed = true)
+    @NacosValue(value = "${db.password}", autoRefreshed = true)
     private String password;
 
     @GetMapping("getUsernameAndPassword")

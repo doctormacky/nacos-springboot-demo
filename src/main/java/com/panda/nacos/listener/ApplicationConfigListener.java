@@ -10,13 +10,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApplicationConfigListener {
 
-    @NacosConfigListener(dataId = "db.properties", converter = DatabaseConvert.class)
+    @NacosConfigListener(dataId = "db-dev.properties", converter = DatabaseConvert.class)
     public void listener(DatabaseInfo databaseInfo) {
         log.info("-----------------------------------------");
         log.info("databaseInfo : {}", databaseInfo);
     }
 
-    @NacosConfigListener(dataId = "db.properties")
+    @NacosConfigListener(dataId = "db-dev.properties")
     public void listener(String content) {
         log.info("***************************************");
         log.info(content);
