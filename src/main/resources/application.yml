@@ -1,12 +1,13 @@
 nacos:
   config:
-    server-addr: x.x.x.x:8848
+    server-addr: localhost:8848
     data-id: db-dev.properties
     auto-refresh: true
+    type: json
     bootstrap:
       enable: true
   discovery:
-    server-addr: x.x.x.x:8848
+    server-addr: localhost:8848
 
 server:
   port: 8080

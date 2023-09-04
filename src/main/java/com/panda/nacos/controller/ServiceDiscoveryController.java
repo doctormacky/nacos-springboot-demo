@@ -18,11 +18,13 @@ public class ServiceDiscoveryController {
 
     @GetMapping("registerService")
     public void registerService() throws NacosException {
+    	System.out.print("====register service====");
         namingService.registerInstance("userRegister", "13.11.11.11", 8082, "hangzhou");
     }
 
     @GetMapping("getAllInstances")
     public void getAllInstances() throws NacosException {
+    	System.out.print("====get all service====");
         log.info(JSON.toJSONString(namingService.getAllInstances("userRegister")));
     }
 }
